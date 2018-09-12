@@ -34,6 +34,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnLongClickListener;
 import android.widget.TextView;
+import androidx.preference.Preference;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.loader.app.LoaderManager;
