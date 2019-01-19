@@ -18,4 +18,12 @@
     <!-- Whether assist gesture settings should be enabled -->
     <bool name="config_should_enable_assist_gesture_settings">true</bool>
 
+   <!-- Smart Charging -->
+   <bool name="config_supportSmartCharging">true</bool>
+
+   <!-- Battery Health -->
+   <string name="config_batCurCap"></string>
+   <string name="config_batDesCap"></string>
+   <string name="config_batChargeCycle"></string>
+   <bool name="config_supportBatteryHealth">true</bool>
 </resources>
