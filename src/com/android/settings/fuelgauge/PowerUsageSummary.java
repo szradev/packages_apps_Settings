@@ -55,7 +55,6 @@ import com.android.settingslib.search.SearchIndexable;
 import com.android.settingslib.utils.PowerUtil;
 import com.android.settingslib.utils.StringUtil;
 import com.android.settingslib.widget.LayoutPreference;
-import com.android.internal.util.custom.CustomUtils;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -372,10 +371,7 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
         updateLastFullChargePreference();
        	mScreenUsagePref.setSubtitle(StringUtil.formatElapsedTime(getContext(),
                 mBatteryUtils.calculateScreenUsageTime(mStatsHelper), false));
-       mBatteryTemp.setSubtitle(
-                CustomUtils.mccCheck(getContext()) ?
-                CustomUtils.batteryTemperature(getContext(), true) + "°F" :
-                CustomUtils.batteryTemperature(getContext(), false) + "°C");
+
        	mCurrentBatteryCapacity.setSubtitle(parseBatterymAhText(mBatCurCap));
         mDesignedBatteryCapacity.setSubtitle(parseBatterymAhText(mBatDesCap));
         mBatteryChargeCycles.setSubtitle(parseBatteryCycle(mBatChgCyc));
